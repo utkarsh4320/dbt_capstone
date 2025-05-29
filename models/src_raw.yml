@@ -2,7 +2,7 @@ version: 2
 
 sources:
   - name: raw
-    database: SNOWFLAKE_LEARNING_DB
-    schema: DBT_PREDDY
+    database: CRICKET_IPL_DB
+    schema: CRICKET_IPL_DB
     tables:
       - name: IPL_MATCH_DATA
