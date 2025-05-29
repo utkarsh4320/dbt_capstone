@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: fct_match_results
+    description: Match-level outcome and metadata
+    columns:
+      - name: match_id
+        tests: [unique, not_null]
+
+  - name: fct_deliveries
+    description: Ball-by-ball data with runs, extras, wickets
+    columns:
+      - name: match_id
+        tests: [not_null]
+
+  - name: fct_innings
+    description: Aggregated innings-level metrics
+    columns:
+      - name: innings_id
+        tests: [not_null]
+
+  - name: fct_player_match
+    description: Player-level match performance
+    columns:
+      - name: player_id
+        tests: [not_null]
