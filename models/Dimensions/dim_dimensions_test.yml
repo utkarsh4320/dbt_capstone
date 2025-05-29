@@ -1,0 +1,46 @@
+version: 2
+
+models:
+  - name: dim_team
+    description: "List of IPL teams"
+    columns:
+      - name: team_id
+        tests: [unique, not_null]
+      - name: team_name
+        tests: [not_null]
+
+  - name: dim_player
+    description: "Master list of all players"
+    columns:
+      - name: player_id
+        tests: [unique, not_null]
+      - name: player_name
+        tests: [not_null]
+
+  - name: dim_venue
+    description: "Stadiums where matches were held"
+    columns:
+      - name: venue_id
+        tests: [unique, not_null]
+      - name: venue_name
+        tests: [not_null]
+
+  - name: dim_umpire_details
+    description: "All umpires and officials"
+    columns:
+      - name: umpire_id
+        tests: [unique, not_null]
+      - name: umpire_name
+        tests: [not_null]
+
+  - name: dim_match
+    description: "Match-level metadata"
+    columns:
+      - name: match_id
+        tests: [unique, not_null]
+
+  - name: dim_season
+    description: "Season-wise match stats"
+    columns:
+      - name: season
+        tests: [unique, not_null]
